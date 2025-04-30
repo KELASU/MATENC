@@ -1,6 +1,8 @@
 # Node modules
 node_modules/
-
+package-lock.json
+package.json
+yarn.lock
 # Expo files
 .expo/
 .expo-shared/
@@ -27,6 +29,11 @@ yarn-error.log*
 
 # Firebase private keys (only if using service account)
 serviceAccountKey.json
+FirebaseConfig.js
+firebase.json
+firebase-debug.log
+firebase.rules
+firebase.ruleset.json
 
 # Android
 android/app/debug.keystore
