@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "matenc",
     "name": "MATENC",
     "slug": "MATENC",
     "version": "1.0.0",
@@ -23,6 +24,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ]
   }
 }

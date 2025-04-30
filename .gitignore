@@ -1,36 +1,62 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Node modules
 node_modules/
 
-# Expo
+# Expo files
 .expo/
-dist/
-web-build/
-expo-env.d.ts
+.expo-shared/
 
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# Metro cache
+.cache/
 
-# Metro
-.metro-health-check*
+# Babel cache
+babel.config.js
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
+# OS-specific
 .DS_Store
-*.pem
+Thumbs.db
 
-# local env files
-.env*.local
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# typescript
-*.tsbuildinfo
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Firebase private keys (only if using service account)
+serviceAccountKey.json
+
+# Android
+android/app/debug.keystore
+android/.gradle/
+android/app/build/
+android/build/
+
+# iOS
+ios/Pods/
+ios/build/
+ios/Podfile.lock
+ios/Podfile~
+
+# React Native
+*.log
+*.lock
+*.iml
+*.hprof
+
+# VS Code settings
+.vscode/
+
+# Web build (if using Expo web)
+web-build/
+
+# ESLint cache
+.eslintcache
+
+# Coverage reports
+coverage/
+
+# Watchman
+.watchmanconfig
