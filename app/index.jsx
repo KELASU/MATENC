@@ -1,16 +1,26 @@
-import { useEffect } from 'react';
-import { router } from 'expo-router';
+// app/index.js
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 
-const Index = () => {
-  useEffect(() => {
-    const timeout = requestAnimationFrame(() => {
-      router.replace('/Logins/Onboarding');
-    });
+export default function Index() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.logo}>MyApp</Text>
+      <ActivityIndicator size="large" color="#fff" />
+    </View>
+  );
+}
 
-    return () => cancelAnimationFrame(timeout);
-  }, []);
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#20394A',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logo: {
+    color: '#fff',
+    fontSize: 32,
+    marginBottom: 20,
+  },
+});
 
-  return null;
-};
-
-export default Index;
