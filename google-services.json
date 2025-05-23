@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1050273519262",
+    "project_id": "matenc-aa4b5",
+    "storage_bucket": "matenc-aa4b5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050273519262:android:95176d48850e0b2c08cd8f",
+        "android_client_info": {
+          "package_name": "com.pokadex.matenc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEHUfaoAx-FmBkPxAkzsavAghMZjRu7hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

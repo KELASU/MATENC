@@ -27,7 +27,7 @@ const Onboarding = () => {
 
       {/* Center Title */}
       <View style={styles.titleContainer}>
-        <Text style={[styles.title,{fontFamily:"Edo SZ"}]}>MATERIAL</Text>
+        <Text style={[styles.title,{fontFamily:"EdoSZ"}]}>MATERIAL</Text>
         <Text style={styles.title}>ENCYCLOPEDIA</Text>
       </View>
 

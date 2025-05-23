@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { Fauth } from '../../FirebaseConfig'; // Your Firebase config file
-import { useNavigation } from '@react-navigation/native';
+import { Fauth } from '../../FirebaseConfig';
 import { router } from 'expo-router';
 
 const Login = () => {
-  const navigation = useNavigation();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,8 +17,14 @@ const Login = () => {
 
     try {
       const userCredential = await signInWithEmailAndPassword(Fauth, email, password);
-      console.log('User signed in:', userCredential.user.email);
-      Alert.alert('Success', `Welcome, ${userCredential.user.email}`);
+      const user = userCredential.user;
+
+      if (!user.emailVerified) {
+        Alert.alert('Email not verified', 'Please verify your email before logging in.');
+        return;
+      }
+
+      Alert.alert('Success', `Welcome, ${user.email}`);
       router.replace('/Main_pages/Home');
     } catch (error) {
       console.error(error);
@@ -75,6 +78,10 @@ const Login = () => {
       <TouchableOpacity onPress={() => router.replace('/Logins/Register')}>
         <Text style={styles.registerText}>Don't have an account? Register</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => router.replace('/Logins/Forget')}>
+        <Text style={styles.registerText}>Forgot Password?</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -89,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontFamily: 'EdoSZ', // Make sure this font is loaded correctly
+    fontFamily: 'EdoSZ',
     fontSize: 28,
     color: '#fff',
     textAlign: 'center',

@@ -1,37 +1,88 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import { Fauth } from '../../FirebaseConfig'; // Import Firebase Auth
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { router } from 'expo-router'; // Import router for navigation
+import { Fauth, Fstore } from '../../FirebaseConfig';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
+import { router } from 'expo-router';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState('');
+  const [location, setLocation] = useState('');
 
   const handleRegister = async () => {
-    if (email && password && confirmPassword) {
-      if (password === confirmPassword) {
-        try {
-          await createUserWithEmailAndPassword(Fauth, email, password); // Use Fauth to create a user
-          alert('Registration successful!');
-          // Navigate to login page or home page after successful registration
-        } catch (error) {
-          console.error(error.message);
-          Alert.alert('Error', error.message); // Show Firebase error message
-        }
-      } else {
-        alert('Passwords do not match!');
-      }
-    } else {
-      alert('Please fill out all fields!');
+    if (!email || !password || !confirmPassword || !name || !location) {
+      Alert.alert('Missing fields', 'Please fill out all fields!');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      Alert.alert('Mismatch', 'Passwords do not match!');
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(Fauth, email, password);
+      const user = userCredential.user;
+
+      await sendEmailVerification(user);
+      Alert.alert('Verify your email', 'A verification email has been sent.');
+
+      // Step 1: Create default user profile in Firestore
+      const userDocRef = doc(Fstore, 'users', user.uid);
+      await setDoc(userDocRef, {
+        uid: user.uid,
+        email,
+        name,
+        location,
+        profilePicture: '',
+        unitPreferences: {
+          temperature: 'Celsius',
+          distance: 'Kilometers',
+        },
+        notificationSettings: {
+          forumPosts: true,
+          marketplaceUpdates: true,
+          supplierListings: true,
+        },
+        favorites: {
+          blueprints: [], // Initialize empty array for favorites
+          forums: [],      // Initialize empty array for forums
+        },
+        followedUsers: [],
+        followedSuppliers: [],
+        createdAt: new Date(),
+      });
+
+      router.replace('/Logins/VerifyEmail');
+    } catch (error) {
+      console.error(error.message);
+      Alert.alert('Registration Error', error.message);
     }
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>REGISTER</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Name"
+        placeholderTextColor="#aaa"
+        onChangeText={setName}
+        value={name}
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Location"
+        placeholderTextColor="#aaa"
+        onChangeText={setLocation}
+        value={location}
+      />
 
       <TextInput
         style={styles.input}
