@@ -15,7 +15,11 @@
     },
     "extra": {
       "eas": {
-        "firebaseProjectIdForInfo": "matenc-aa4b5"
+        "firebaseProjectIdForInfo": "matenc-aa4b5",
+        "projectId": "b99ba540-d19f-4999-a336-6e8815b05df7"
+      },
+      "router": {
+        "origin": false
       }
     },
     "ios": {
@@ -29,7 +33,8 @@
         "backgroundColor": "#ffffff",
         "package": "com.pokadex.matenc",
         "googleServicesFile": "./google-services.json"
-      }
+      },
+      "package": "com.pokadex.matenc"
     },
     "web": {
       "favicon": "./assets/favicon.png"
