@@ -316,12 +316,22 @@ const Forum = () => {
   }
 
   const renderPostItem = (post) => {
-    // ... (keep as is, including edit/delete/comment buttons)
     const isNew = post.createdAt && lastReadTimestamp && post.createdAt.toMillis() > lastReadTimestamp.toMillis();
     const isOwner = Fauth.currentUser && Fauth.currentUser.uid === post.userId;
-
+  
+    const navigateToPostDetail = () => {
+      router.push(`/Main_pages/ForumPost/${post.id}`);
+    };
+  
+    // The key prop should be on this TouchableOpacity if it's the direct child of the map
     return (
-      <View key={post.id} style={[styles.discussionContainer, isNew && styles.newPostHighlight]}>
+      <TouchableOpacity 
+        key={post.id} // <<<< ADD KEY HERE
+        onPress={navigateToPostDetail} 
+        activeOpacity={0.7} 
+        style={[styles.discussionContainer, isNew && styles.newPostHighlight]}
+      >
+        {/* Inner content of the post item... */}
         <View style={styles.discussionImagePlaceholder}>
           <Image
             source={{ uri: post.avatarUrl || 'https://ui-avatars.com/api/?background=random' }}
@@ -329,21 +339,23 @@ const Forum = () => {
           />
         </View>
         <View style={styles.discussionContent}>
-          <Text style={styles.discussionTitle}>{post.title}</Text>
+          <Text style={styles.discussionTitle} numberOfLines={2} ellipsizeMode="tail">{post.title}</Text>
           <Text style={styles.discussionBody} numberOfLines={3} ellipsizeMode="tail">{post.content}</Text>
           <View style={styles.discussionInfo}>
             <Image
               source={{ uri: post.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(post.username)}&background=random&size=30` }}
               style={styles.profilePicture}
             />
-            <Text style={styles.discussionUsername}>{post.username}</Text>
+            <TouchableOpacity onPress={() => router.push(`/profile/${post.userId}`)}>
+              <Text style={styles.discussionUsername}>{post.username}</Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.discussionStats}>
             <View style={styles.discussionStatItem}>
               <Icon name="star-outline" color="#FFD700" size={16} />
               <Text style={styles.discussionStatText}>{post.rating || 0}/10</Text>
             </View>
-            <TouchableOpacity style={styles.discussionStatItem} onPress={() => handleViewComments(post.id)}>
+            <TouchableOpacity style={styles.discussionStatItem} onPress={(e) => { e.stopPropagation(); navigateToPostDetail(); }}>
               <Icon name="message-text-outline" color="#FFFFFF" size={16} />
               <Text style={styles.discussionStatText}>{post.commentCount || 0}</Text>
             </TouchableOpacity>
@@ -355,35 +367,18 @@ const Forum = () => {
           )}
           {isOwner && (
             <View style={styles.postActions}>
-              <TouchableOpacity onPress={() => handleEditPost(post)} style={styles.actionButton}>
+              <TouchableOpacity onPress={(e) => { e.stopPropagation(); handleEditPost(post); }} style={styles.actionButton}>
                 <Icon name="pencil" size={18} color="#A0D2DB" />
                 <Text style={styles.actionButtonText}>Edit</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => handleDeletePost(post.id)} style={styles.actionButton}>
+              <TouchableOpacity onPress={(e) => { e.stopPropagation(); handleDeletePost(post.id); }} style={styles.actionButton}>
                 <Icon name="delete" size={18} color="#FF6B6B" />
                 <Text style={styles.actionButtonText}>Delete</Text>
               </TouchableOpacity>
             </View>
           )}
-          {viewingCommentsForPostId === post.id && (
-            <View style={styles.inlineCommentSection}>
-              <Text style={styles.inlineCommentTitle}>Comments for "{post.title}"</Text>
-              <Text style={{color: 'white', marginVertical: 5}}>(Comment display UI not fully implemented here)</Text>
-              <TextInput
-                style={styles.commentInput}
-                placeholder="Add a comment..."
-                placeholderTextColor="#ccc"
-                value={newComment}
-                onChangeText={setNewComment}
-                onSubmitEditing={() => handleAddComment(post.id)}
-              />
-              <TouchableOpacity onPress={() => handleAddComment(post.id)} style={styles.addCommentButton}>
-                <Text style={styles.addCommentButtonText}>Post Comment</Text>
-              </TouchableOpacity>
-            </View>
-          )}
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 

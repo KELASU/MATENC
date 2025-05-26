@@ -5,14 +5,8 @@
     "slug": "MATENC",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "extra": {
       "eas": {
         "firebaseProjectIdForInfo": "matenc-aa4b5",
@@ -28,16 +22,10 @@
       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "package": "com.pokadex.matenc",
-        "googleServicesFile": "./google-services.json"
-      },
+      "googleServicesFile": "./google-services.json",
       "package": "com.pokadex.matenc"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router",

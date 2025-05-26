@@ -53,6 +53,12 @@ export default function MainTabsLayout() {
           href: null,
         }}
       />
+      <Tabs.Screen
+        name="ForumPost"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
     
   );

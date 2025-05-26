@@ -8,23 +8,25 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eas-build-pre-install": "echo '--- DIAGNOSTIC SCRIPT START ---' && echo 'Current directory (pwd):' && pwd && echo 'Files in current directory (ls -la .):' && ls -la . && echo 'Files in /home/expo/workingdir/ (ls -la /home/expo/workingdir/):' && ls -la /home/expo/workingdir/ && echo 'Files in /home/expo/workingdir/build/ (ls -la /home/expo/workingdir/build/):' && (ls -la /home/expo/workingdir/build/ || echo 'Could not list /home/expo/workingdir/build/ (it might not exist yet or ls failed)') && echo '--- DIAGNOSTIC SCRIPT END ---'"
-    },
+  },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "1.23.1",
     "@react-native-firebase/app": "^22.1.0",
     "@react-native-firebase/auth": "^22.1.0",
     "@react-native-masked-view/masked-view": "0.3.2",
-    "@react-navigation/bottom-tabs": "^7.3.10",
-    "@react-navigation/native": "^7.1.9",
+    "@react-navigation/bottom-tabs": "^7.2.0",
+    "@react-navigation/native": "^7.0.14",
     "@react-navigation/stack": "^7.2.10",
-    "expo": "52.0.0",
+    "expo": "~52.0.46",
     "expo-constants": "~17.0.8",
+    "expo-dev-client": "~5.0.20",
     "expo-device": "~7.0.3",
+    "expo-firebase-messaging": "^2.0.0",
     "expo-font": "~13.0.4",
     "expo-linking": "~7.0.5",
     "expo-notifications": "~0.29.14",
-    "expo-router": "~4.0.20",
+    "expo-router": "~4.0.21",
     "expo-status-bar": "~2.0.1",
     "firebase": "^11.8.1",
     "react": "18.3.1",
@@ -35,11 +37,12 @@
     "react-native-screens": "~4.4.0",
     "react-native-svg": "15.8.0",
     "react-native-vector-icons": "^10.2.0",
-    "expo-dev-client": "~5.0.20"
+    "expo-image-picker": "~16.0.6",
+    "expo-document-picker": "~13.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "metro": "^0.82.1"
+    "metro": "^0.81.0"
   },
   "private": true
 }
