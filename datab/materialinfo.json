@@ -2,7 +2,7 @@
   {
     "materialId": "53697808",
     "Name": "Steel",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Metal",
     "DurabilityRating": 9,
     "DurabilityDesc": "Very strong, long-lasting",
@@ -21,7 +21,7 @@
   {
     "materialId": "61130887",
     "Name": "Aluminum",
-    "Price": 30000,
+    "Price": 300000,
     "Category": "Metal",
     "DurabilityRating": 7,
     "DurabilityDesc": "Lightweight but durable",
@@ -40,7 +40,7 @@
   {
     "materialId": "89944785",
     "Name": "Copper",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Metal",
     "DurabilityRating": 8,
     "DurabilityDesc": "Corrosion resistant, long life",
@@ -59,7 +59,7 @@
   {
     "materialId": "95585797",
     "Name": "Oak Wood",
-    "Price": 15000,
+    "Price": 150000,
     "Category": "Wood",
     "DurabilityRating": 7,
     "DurabilityDesc": "Strong, resistant to wear",
@@ -78,7 +78,7 @@
   {
     "materialId": "82119030",
     "Name": "Pine Wood",
-    "Price": 8000,
+    "Price": 80000,
     "Category": "Wood",
     "DurabilityRating": 5,
     "DurabilityDesc": "Fairly durable, lightweight",
@@ -97,7 +97,7 @@
   {
     "materialId": "44482161",
     "Name": "Concrete",
-    "Price": 5000,
+    "Price": 50000,
     "Category": "Composite",
     "DurabilityRating": 8,
     "DurabilityDesc": "Extremely tough, long-lasting",
@@ -116,7 +116,7 @@
   {
     "materialId": "36823086",
     "Name": "Glass",
-    "Price": 12000,
+    "Price": 120000,
     "Category": "Glass",
     "DurabilityRating": 6,
     "DurabilityDesc": "Brittle but scratch resistant",
@@ -135,7 +135,7 @@
   {
     "materialId": "99122433",
     "Name": "Rubber",
-    "Price": 18000,
+    "Price": 180000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Flexible, good shock absorption",
@@ -154,7 +154,7 @@
   {
     "materialId": "40267558",
     "Name": "Nylon",
-    "Price": 22000,
+    "Price": 220000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Abrasion resistant, strong",
@@ -173,7 +173,7 @@
   {
     "materialId": "65039349",
     "Name": "Polyethylene",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Good chemical resistance",
@@ -192,7 +192,7 @@
   {
     "materialId": "69235914",
     "Name": "Carbon Fiber",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely strong, lightweight",
@@ -211,7 +211,7 @@
   {
     "materialId": "94687828",
     "Name": "Titanium",
-    "Price": 60000,
+    "Price": 600000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Highly corrosion resistant",
@@ -230,7 +230,7 @@
   {
     "materialId": "21469785",
     "Name": "Brass",
-    "Price": 45000,
+    "Price": 450000,
     "Category": "Metal",
     "DurabilityRating": 7,
     "DurabilityDesc": "Good corrosion resistance",
@@ -249,7 +249,7 @@
   {
     "materialId": "76371062",
     "Name": "Limestone",
-    "Price": 7000,
+    "Price": 70000,
     "Category": "Stone",
     "DurabilityRating": 6,
     "DurabilityDesc": "Durable, weather resistant",
@@ -268,7 +268,7 @@
   {
     "materialId": "19233617",
     "Name": "Brick",
-    "Price": 6000,
+    "Price": 60000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Very strong, fire resistant",
@@ -287,7 +287,7 @@
   {
     "materialId": "20090274",
     "Name": "Ceramic",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Hard, heat resistant",
@@ -306,7 +306,7 @@
   {
     "materialId": "31812080",
     "Name": "Lead",
-    "Price": 50000,
+    "Price": 500000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Corrosion resistant, heavy",
@@ -325,7 +325,7 @@
   {
     "materialId": "70582535",
     "Name": "Silver",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Tarnish resistant, malleable",
@@ -344,7 +344,7 @@
   {
     "materialId": "51499136",
     "Name": "Gold",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Corrosion proof, very soft",
@@ -363,7 +363,7 @@
   {
     "materialId": "31921864",
     "Name": "Platinum",
-    "Price": 180000,
+    "Price": 1800000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Highly inert, very dense",
@@ -382,7 +382,7 @@
   {
     "materialId": "43632949",
     "Name": "Magnesium",
-    "Price": 35000,
+    "Price": 350000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Lightweight, good strength",
@@ -401,7 +401,7 @@
   {
     "materialId": "69483046",
     "Name": "Zinc",
-    "Price": 28000,
+    "Price": 280000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Corrosion protective coating",
@@ -420,7 +420,7 @@
   {
     "materialId": "45489129",
     "Name": "Polyester",
-    "Price": 15000,
+    "Price": 150000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Strong, resistant to shrinking",
@@ -439,7 +439,7 @@
   {
     "materialId": "56777781",
     "Name": "Acrylic",
-    "Price": 19000,
+    "Price": 190000,
     "Category": "Plastic",
     "DurabilityRating": 5,
     "DurabilityDesc": "Transparent, impact resistant",
@@ -458,7 +458,7 @@
   {
     "materialId": "23342592",
     "Name": "PVC",
-    "Price": 13000,
+    "Price": 130000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Weather resistant, durable",
@@ -477,7 +477,7 @@
   {
     "materialId": "77033876",
     "Name": "Glass Fiber",
-    "Price": 35000,
+    "Price": 350000,
     "Category": "Glass",
     "DurabilityRating": 8,
     "DurabilityDesc": "High tensile strength, lightweight",
@@ -496,7 +496,7 @@
   {
     "materialId": "58403101",
     "Name": "Polycarbonate",
-    "Price": 28000,
+    "Price": 280000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Extremely impact resistant, transparent",
@@ -515,7 +515,7 @@
   {
     "materialId": "11780409",
     "Name": "HDPE",
-    "Price": 9000,
+    "Price": 90000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Tough, chemical resistant",
@@ -534,7 +534,7 @@
   {
     "materialId": "83459475",
     "Name": "LDPE",
-    "Price": 8000,
+    "Price": 80000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Very flexible, good clarity",
@@ -553,7 +553,7 @@
   {
     "materialId": "68765358",
     "Name": "Silicone",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Heat resistant, flexible",
@@ -572,7 +572,7 @@
   {
     "materialId": "32855137",
     "Name": "Tungsten",
-    "Price": 90000,
+    "Price": 900000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, high melting point",
@@ -591,7 +591,7 @@
   {
     "materialId": "41776620",
     "Name": "Chromium",
-    "Price": 75000,
+    "Price": 750000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Hard, corrosion resistant",
@@ -610,7 +610,7 @@
   {
     "materialId": "87314725",
     "Name": "Urethane",
-    "Price": 30000,
+    "Price": 300000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Abrasion resistant, flexible",
@@ -629,7 +629,7 @@
   {
     "materialId": "80990222",
     "Name": "Polypropylene",
-    "Price": 11000,
+    "Price": 110000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Fatigue resistant, tough",
@@ -648,7 +648,7 @@
   {
     "materialId": "88210273",
     "Name": "Expanded Polystyrene (EPS)",
-    "Price": 3000,
+    "Price": 30000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Lightweight, good insulator",
@@ -667,7 +667,7 @@
   {
     "materialId": "12465261",
     "Name": "Neoprene",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Weather resistant, oil resistant",
@@ -686,7 +686,7 @@
   {
     "materialId": "85450561",
     "Name": "Ceramic Tiles",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Hard, water resistant",
@@ -705,7 +705,7 @@
   {
     "materialId": "21161366",
     "Name": "Gypsum",
-    "Price": 4000,
+    "Price": 40000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Fire resistant, sound absorbing",
@@ -724,7 +724,7 @@
   {
     "materialId": "60812951",
     "Name": "Asphalt",
-    "Price": 7000,
+    "Price": 70000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Waterproof, flexible pavement",
@@ -743,7 +743,7 @@
   {
     "materialId": "47684348",
     "Name": "Granite",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Stone",
     "DurabilityRating": 8,
     "DurabilityDesc": "Extremely hard, heat resistant",
@@ -762,7 +762,7 @@
   {
     "materialId": "15638206",
     "Name": "Quartz",
-    "Price": 18000,
+    "Price": 180000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, chemical resistant",
@@ -781,7 +781,7 @@
   {
     "materialId": "56808323",
     "Name": "Teflon (PTFE)",
-    "Price": 60000,
+    "Price": 600000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Non-stick, chemical inert",
@@ -800,7 +800,7 @@
   {
     "materialId": "77163824",
     "Name": "Polyurethane Foam",
-    "Price": 12000,
+    "Price": 120000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Good insulator, flexible",
@@ -819,7 +819,7 @@
   {
     "materialId": "46038636",
     "Name": "Kevlar",
-    "Price": 90000,
+    "Price": 900000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High tensile strength, bulletproof",
@@ -838,7 +838,7 @@
   {
     "materialId": "27251709",
     "Name": "Fiberglass",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Glass",
     "DurabilityRating": 7,
     "DurabilityDesc": "Strong, corrosion resistant",
@@ -857,7 +857,7 @@
   {
     "materialId": "61836883",
     "Name": "Silica Gel",
-    "Price": 15000,
+    "Price": 150000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Absorbent, chemically inert",
@@ -876,7 +876,7 @@
   {
     "materialId": "65479500",
     "Name": "Wood Plastic Composite (WPC)",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Wood",
     "DurabilityRating": 6,
     "DurabilityDesc": "Low maintenance, weather resistant",
@@ -895,7 +895,7 @@
   {
     "materialId": "72070004",
     "Name": "Aerogel",
-    "Price": 120000,
+    "Price": 1200000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Extremely lightweight, excellent insulator",
@@ -914,7 +914,7 @@
   {
     "materialId": "71705586",
     "Name": "Graphite",
-    "Price": 50000,
+    "Price": 500000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Lubricating, electrically conductive",
@@ -933,7 +933,7 @@
   {
     "materialId": "70734092",
     "Name": "Cork",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Lightweight, insulating",
@@ -952,7 +952,7 @@
   {
     "materialId": "89271634",
     "Name": "Cellulose",
-    "Price": 6000,
+    "Price": 60000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Biodegradable, renewable",
@@ -971,7 +971,7 @@
   {
     "materialId": "57791276",
     "Name": "Nickel",
-    "Price": 55000,
+    "Price": 550000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Corrosion resistant, strong",
@@ -990,7 +990,7 @@
   {
     "materialId": "26536465",
     "Name": "Tin",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Corrosion resistant, soft",
@@ -1009,7 +1009,7 @@
   {
     "materialId": "95454829",
     "Name": "Tungsten Carbide",
-    "Price": 120000,
+    "Price": 1200000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Extremely hard, wear resistant",
@@ -1028,7 +1028,7 @@
   {
     "materialId": "75719779",
     "Name": "Alumina (Aluminum Oxide)",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Metal",
     "DurabilityRating": 9,
     "DurabilityDesc": "Very hard, abrasive resistant",
@@ -1047,7 +1047,7 @@
   {
     "materialId": "28064983",
     "Name": "Zirconia (Zirconium Oxide)",
-    "Price": 35000,
+    "Price": 350000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength, biocompatible",
@@ -1066,7 +1066,7 @@
   {
     "materialId": "70141479",
     "Name": "Silicon Carbide",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, heat resistant",
@@ -1085,7 +1085,7 @@
   {
     "materialId": "85261114",
     "Name": "Sapphire",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Extremely hard, transparent",
@@ -1104,7 +1104,7 @@
   {
     "materialId": "23568612",
     "Name": "Plexiglass (PMMA)",
-    "Price": 18000,
+    "Price": 180000,
     "Category": "Glass",
     "DurabilityRating": 6,
     "DurabilityDesc": "Transparent, lightweight",
@@ -1123,7 +1123,7 @@
   {
     "materialId": "56909759",
     "Name": "Polystyrene (PS)",
-    "Price": 9000,
+    "Price": 90000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Transparent, rigid",
@@ -1142,7 +1142,7 @@
   {
     "materialId": "87005657",
     "Name": "ABS Plastic",
-    "Price": 16000,
+    "Price": 160000,
     "Category": "Plastic",
     "DurabilityRating": 7,
     "DurabilityDesc": "Impact resistant, tough",
@@ -1161,7 +1161,7 @@
   {
     "materialId": "24753120",
     "Name": "Polyvinylidene Fluoride (PVDF)",
-    "Price": 45000,
+    "Price": 450000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Chemical resistant, UV stable",
@@ -1180,7 +1180,7 @@
   {
     "materialId": "25124502",
     "Name": "Polyether Ether Ketone (PEEK)",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength, high temperature",
@@ -1199,7 +1199,7 @@
   {
     "materialId": "33840281",
     "Name": "Tungsten Heavy Alloy",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Very dense, high strength",
@@ -1218,7 +1218,7 @@
   {
     "materialId": "93005481",
     "Name": "Inconel",
-    "Price": 120000,
+    "Price": 1200000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High temperature, corrosion resistant",
@@ -1237,7 +1237,7 @@
   {
     "materialId": "48585793",
     "Name": "Hastelloy",
-    "Price": 110000,
+    "Price": 1100000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Excellent corrosion resistance",
@@ -1256,7 +1256,7 @@
   {
     "materialId": "54805732",
     "Name": "Cobalt",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Hard, wear resistant",
@@ -1275,7 +1275,7 @@
   {
     "materialId": "10568521",
     "Name": "Bismuth",
-    "Price": 60000,
+    "Price": 600000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Low melting point, brittle",
@@ -1294,7 +1294,7 @@
   {
     "materialId": "22543408",
     "Name": "Cadmium",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Corrosion resistant, toxic",
@@ -1313,7 +1313,7 @@
   {
     "materialId": "98767233",
     "Name": "Iridium",
-    "Price": 200000,
+    "Price": 2000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely corrosion resistant, dense",
@@ -1332,7 +1332,7 @@
   {
     "materialId": "55478091",
     "Name": "Osmium",
-    "Price": 250000,
+    "Price": 2500000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Densest element, very hard",
@@ -1351,7 +1351,7 @@
   {
     "materialId": "76917078",
     "Name": "Rhodium",
-    "Price": 300000,
+    "Price": 3000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High reflectivity, corrosion resistant",
@@ -1370,7 +1370,7 @@
   {
     "materialId": "17674188",
     "Name": "Palladium",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Catalytic properties, corrosion resistant",
@@ -1389,7 +1389,7 @@
   {
     "materialId": "91536582",
     "Name": "Molybdenum",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "High melting point, strong",
@@ -1408,7 +1408,7 @@
   {
     "materialId": "26260987",
     "Name": "Niobium",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Superconducting, corrosion resistant",
@@ -1427,7 +1427,7 @@
   {
     "materialId": "82717540",
     "Name": "Tantalum",
-    "Price": 90000,
+    "Price": 900000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Corrosion resistant, biocompatible",
@@ -1446,7 +1446,7 @@
   {
     "materialId": "87842900",
     "Name": "Germanium",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Semiconductor, brittle",
@@ -1465,7 +1465,7 @@
   {
     "materialId": "94430584",
     "Name": "Indium",
-    "Price": 75000,
+    "Price": 750000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Very soft, low melting point",
@@ -1484,7 +1484,7 @@
   {
     "materialId": "98926706",
     "Name": "Gallium",
-    "Price": 120000,
+    "Price": 1200000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Low melting point, brittle",
@@ -1503,7 +1503,7 @@
   {
     "materialId": "60413422",
     "Name": "Selenium",
-    "Price": 60000,
+    "Price": 600000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Photoconductive, toxic",
@@ -1522,7 +1522,7 @@
   {
     "materialId": "54537952",
     "Name": "Tellurium",
-    "Price": 65000,
+    "Price": 650000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Semiconductor, brittle",
@@ -1541,7 +1541,7 @@
   {
     "materialId": "11842408",
     "Name": "Beryllium",
-    "Price": 90000,
+    "Price": 900000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Lightweight, high strength",
@@ -1560,7 +1560,7 @@
   {
     "materialId": "25638344",
     "Name": "Vanadium",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Strong, corrosion resistant",
@@ -1579,7 +1579,7 @@
   {
     "materialId": "72905929",
     "Name": "Uranium",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Radioactive, very dense",
@@ -1598,7 +1598,7 @@
   {
     "materialId": "25135713",
     "Name": "Thorium",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Radioactive, dense",
@@ -1617,7 +1617,7 @@
   {
     "materialId": "40562568",
     "Name": "Plutonium",
-    "Price": 200000,
+    "Price": 2000000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Highly radioactive, fissile",
@@ -1636,7 +1636,7 @@
   {
     "materialId": "73077174",
     "Name": "Silicon",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Semiconductor, hard",
@@ -1655,7 +1655,7 @@
   {
     "materialId": "28514192",
     "Name": "Silicon Nitride",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength, heat resistant",
@@ -1674,7 +1674,7 @@
   {
     "materialId": "61354990",
     "Name": "Boron Nitride",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, high thermal conductivity",
@@ -1693,7 +1693,7 @@
   {
     "materialId": "59872481",
     "Name": "Diamond",
-    "Price": 500000,
+    "Price": 5000000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Hardest known material, transparent",
@@ -1712,7 +1712,7 @@
   {
     "materialId": "84199286",
     "Name": "Graphene",
-    "Price": 1000000,
+    "Price": 10000000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Strongest known material, lightweight",
@@ -1731,7 +1731,7 @@
   {
     "materialId": "41916012",
     "Name": "Boron",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Hard, high melting point",
@@ -1750,7 +1750,7 @@
   {
     "materialId": "48701367",
     "Name": "Sodium",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Very reactive, soft",
@@ -1769,7 +1769,7 @@
   {
     "materialId": "28884393",
     "Name": "Potassium",
-    "Price": 12000,
+    "Price": 120000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Extremely reactive, soft",
@@ -1788,7 +1788,7 @@
   {
     "materialId": "87129071",
     "Name": "Calcium",
-    "Price": 8000,
+    "Price": 80000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Reactive, soft metal",
@@ -1807,7 +1807,7 @@
   {
     "materialId": "76843012",
     "Name": "Magnesium Alloy",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Lightweight, good strength",
@@ -1826,7 +1826,7 @@
   {
     "materialId": "39227089",
     "Name": "Titanium Alloy",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength-to-weight, corrosion resistant",
@@ -1845,7 +1845,7 @@
   {
     "materialId": "39246804",
     "Name": "Tungsten Alloy",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Very dense, high strength",
@@ -1864,7 +1864,7 @@
   {
     "materialId": "92448561",
     "Name": "Zirconium",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Corrosion resistant, low neutron absorption",
@@ -1883,7 +1883,7 @@
   {
     "materialId": "18494283",
     "Name": "Hafnium",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Corrosion resistant, high neutron absorption",
@@ -1902,7 +1902,7 @@
   {
     "materialId": "71285937",
     "Name": "Rhenium",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High melting point, dense",
@@ -1921,7 +1921,7 @@
   {
     "materialId": "64696992",
     "Name": "Osmium Alloy",
-    "Price": 280000,
+    "Price": 2800000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, high density",
@@ -1940,7 +1940,7 @@
   {
     "materialId": "19980640",
     "Name": "Maple Wood",
-    "Price": 18000,
+    "Price": 180000,
     "Category": "Wood",
     "DurabilityRating": 8,
     "DurabilityDesc": "Very strong, resistant to dents",
@@ -1959,7 +1959,7 @@
   {
     "materialId": "45320968",
     "Name": "Cherry Wood",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Wood",
     "DurabilityRating": 7,
     "DurabilityDesc": "Durable, beautiful grain",
@@ -1978,7 +1978,7 @@
   {
     "materialId": "46834551",
     "Name": "Walnut Wood",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Wood",
     "DurabilityRating": 8,
     "DurabilityDesc": "Rich color, strong",
@@ -1997,7 +1997,7 @@
   {
     "materialId": "30463068",
     "Name": "Mahogany Wood",
-    "Price": 30000,
+    "Price": 300000,
     "Category": "Wood",
     "DurabilityRating": 8,
     "DurabilityDesc": "Excellent stability, rot resistant",
@@ -2016,7 +2016,7 @@
   {
     "materialId": "62419813",
     "Name": "Teak Wood",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Wood",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely durable, weather resistant",
@@ -2035,7 +2035,7 @@
   {
     "materialId": "28474901",
     "Name": "Ash Wood",
-    "Price": 16000,
+    "Price": 160000,
     "Category": "Wood",
     "DurabilityRating": 7,
     "DurabilityDesc": "Strong, excellent shock resistance",
@@ -2054,7 +2054,7 @@
   {
     "materialId": "58150642",
     "Name": "Birch Wood",
-    "Price": 14000,
+    "Price": 140000,
     "Category": "Wood",
     "DurabilityRating": 6,
     "DurabilityDesc": "Fine grain, moderately hard",
@@ -2073,7 +2073,7 @@
   {
     "materialId": "32693312",
     "Name": "Hickory Wood",
-    "Price": 17000,
+    "Price": 170000,
     "Category": "Wood",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely strong, high shock resistance",
@@ -2092,7 +2092,7 @@
   {
     "materialId": "70233020",
     "Name": "Cedar Wood",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Wood",
     "DurabilityRating": 6,
     "DurabilityDesc": "Aromatic, insect and rot resistant",
@@ -2111,7 +2111,7 @@
   {
     "materialId": "86239937",
     "Name": "Redwood Wood",
-    "Price": 12000,
+    "Price": 120000,
     "Category": "Wood",
     "DurabilityRating": 7,
     "DurabilityDesc": "Weather resistant, lightweight",
@@ -2130,7 +2130,7 @@
   {
     "materialId": "86857054",
     "Name": "Pine Wood (Yellow)",
-    "Price": 9000,
+    "Price": 90000,
     "Category": "Wood",
     "DurabilityRating": 6,
     "DurabilityDesc": "Strong for a softwood, widely available",
@@ -2149,7 +2149,7 @@
   {
     "materialId": "56225399",
     "Name": "Poplar Wood",
-    "Price": 11000,
+    "Price": 110000,
     "Category": "Wood",
     "DurabilityRating": 5,
     "DurabilityDesc": "Lightweight, easy to work",
@@ -2168,7 +2168,7 @@
   {
     "materialId": "52049808",
     "Name": "Spruce Wood",
-    "Price": 7000,
+    "Price": 70000,
     "Category": "Wood",
     "DurabilityRating": 5,
     "DurabilityDesc": "Lightweight, good for framing",
@@ -2187,7 +2187,7 @@
   {
     "materialId": "33399298",
     "Name": "Larch Wood",
-    "Price": 13000,
+    "Price": 130000,
     "Category": "Wood",
     "DurabilityRating": 7,
     "DurabilityDesc": "Durable, good weather resistance",
@@ -2206,7 +2206,7 @@
   {
     "materialId": "50056283",
     "Name": "Bamboo Wood",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Wood",
     "DurabilityRating": 7,
     "DurabilityDesc": "Fast growing, strong",
@@ -2225,7 +2225,7 @@
   {
     "materialId": "90915324",
     "Name": "Sandstone",
-    "Price": 6000,
+    "Price": 60000,
     "Category": "Stone",
     "DurabilityRating": 5,
     "DurabilityDesc": "Porous, natural appearance",
@@ -2244,7 +2244,7 @@
   {
     "materialId": "56054033",
     "Name": "Marble",
-    "Price": 30000,
+    "Price": 300000,
     "Category": "Stone",
     "DurabilityRating": 6,
     "DurabilityDesc": "Luxurious, classic appearance",
@@ -2263,7 +2263,7 @@
   {
     "materialId": "10181310",
     "Name": "Granite (Black)",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Stone",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, sleek appearance",
@@ -2282,7 +2282,7 @@
   {
     "materialId": "14070869",
     "Name": "Slate",
-    "Price": 15000,
+    "Price": 150000,
     "Category": "Stone",
     "DurabilityRating": 7,
     "DurabilityDesc": "Durable, unique texture",
@@ -2301,7 +2301,7 @@
   {
     "materialId": "90007697",
     "Name": "Basalt",
-    "Price": 18000,
+    "Price": 180000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Dense, good for paving",
@@ -2320,7 +2320,7 @@
   {
     "materialId": "29384194",
     "Name": "Gneiss",
-    "Price": 22000,
+    "Price": 220000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Durable, attractive banded appearance",
@@ -2339,7 +2339,7 @@
   {
     "materialId": "80576366",
     "Name": "Limestone (Travertine)",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Stone",
     "DurabilityRating": 5,
     "DurabilityDesc": "Porous, unique pitted texture",
@@ -2358,7 +2358,7 @@
   {
     "materialId": "63682668",
     "Name": "Onyx",
-    "Price": 50000,
+    "Price": 500000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Translucent, decorative",
@@ -2377,7 +2377,7 @@
   {
     "materialId": "24657311",
     "Name": "Dolomite",
-    "Price": 12000,
+    "Price": 120000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Similar to marble, more durable",
@@ -2396,7 +2396,7 @@
   {
     "materialId": "53245811",
     "Name": "Quartzite",
-    "Price": 28000,
+    "Price": 280000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, resembles marble",
@@ -2415,7 +2415,7 @@
   {
     "materialId": "96393401",
     "Name": "Travertine",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Porous, natural and earthy look",
@@ -2434,7 +2434,7 @@
   {
     "materialId": "36155307",
     "Name": "Soapstone",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Stone",
     "DurabilityRating": 3,
     "DurabilityDesc": "Soft, non-porous, heat retention",
@@ -2453,7 +2453,7 @@
   {
     "materialId": "59847699",
     "Name": "Schist",
-    "Price": 17000,
+    "Price": 170000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Foliated, weather resistant",
@@ -2472,7 +2472,7 @@
   {
     "materialId": "14607957",
     "Name": "Gabbro",
-    "Price": 23000,
+    "Price": 230000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Dense, dark, durable",
@@ -2491,7 +2491,7 @@
   {
     "materialId": "33197521",
     "Name": "Serpentine",
-    "Price": 19000,
+    "Price": 190000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Soft, decorative, unique patterns",
@@ -2510,7 +2510,7 @@
   {
     "materialId": "52381447",
     "Name": "EVA Foam",
-    "Price": 500,
+    "Price": 5000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Lightweight, flexible",
@@ -2529,7 +2529,7 @@
   {
     "materialId": "69277554",
     "Name": "Worbla",
-    "Price": 3000,
+    "Price": 30000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Thermoplastic, moldable",
@@ -2548,7 +2548,7 @@
   {
     "materialId": "96664663",
     "Name": "Thibra",
-    "Price": 2800,
+    "Price": 28000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Thermoplastic, smooth finish",
@@ -2567,7 +2567,7 @@
   {
     "materialId": "79313898",
     "Name": "Craft Foam",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Very lightweight, easy to cut",
@@ -2586,7 +2586,7 @@
   {
     "materialId": "83297443",
     "Name": "Sculpey (Polymer Clay)",
-    "Price": 800,
+    "Price": 8000,
     "Category": "Plastic",
     "DurabilityRating": 5,
     "DurabilityDesc": "Moldable, bakes hard",
@@ -2605,7 +2605,7 @@
   {
     "materialId": "80533405",
     "Name": "Fabric (Cotton)",
-    "Price": 100,
+    "Price": 1000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Soft, breathable",
@@ -2624,7 +2624,7 @@
   {
     "materialId": "93317683",
     "Name": "Lycra (Spandex)",
-    "Price": 500,
+    "Price": 5000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Stretchy, form-fitting",
@@ -2643,7 +2643,7 @@
   {
     "materialId": "69298765",
     "Name": "Satin Fabric",
-    "Price": 300,
+    "Price": 3000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Smooth, shiny",
@@ -2662,7 +2662,7 @@
   {
     "materialId": "62383529",
     "Name": "Brocade Fabric",
-    "Price": 800,
+    "Price": 8000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Thick, decorative",
@@ -2681,7 +2681,7 @@
   {
     "materialId": "37307875",
     "Name": "Vinyl Fabric",
-    "Price": 400,
+    "Price": 4000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Shiny, water-resistant",
@@ -2700,7 +2700,7 @@
   {
     "materialId": "61308032",
     "Name": "Plywood",
-    "Price": 1000,
+    "Price": 10000,
     "Category": "Wood",
     "DurabilityRating": 6,
     "DurabilityDesc": "Strong for its weight, versatile",
@@ -2719,7 +2719,7 @@
   {
     "materialId": "62022487",
     "Name": "MDF (Medium-Density Fiberboard)",
-    "Price": 800,
+    "Price": 8000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Smooth surface, easy to machine",
@@ -2738,7 +2738,7 @@
   {
     "materialId": "47212586",
     "Name": "Acrylic Sheet",
-    "Price": 1500,
+    "Price": 15000,
     "Category": "Plastic",
     "DurabilityRating": 5,
     "DurabilityDesc": "Transparent, lightweight",
@@ -2757,7 +2757,7 @@
   {
     "materialId": "56193116",
     "Name": "Polypropylene Sheet",
-    "Price": 1200,
+    "Price": 12000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Lightweight, chemical resistant",
@@ -2776,7 +2776,7 @@
   {
     "materialId": "82641216",
     "Name": "Fiberglass Cloth",
-    "Price": 2000,
+    "Price": 20000,
     "Category": "Glass",
     "DurabilityRating": 7,
     "DurabilityDesc": "Strong, good for reinforcing",
@@ -2795,7 +2795,7 @@
   {
     "materialId": "30665749",
     "Name": "Resin (Epoxy)",
-    "Price": 5000,
+    "Price": 50000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Strong adhesive, clear finish",
@@ -2814,7 +2814,7 @@
   {
     "materialId": "51023437",
     "Name": "LED Strips",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Illumination, decorative",
@@ -2833,7 +2833,7 @@
   {
     "materialId": "80016690",
     "Name": "EL Wire",
-    "Price": 150,
+    "Price": 1500,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Flexible illumination, low power",
@@ -2852,7 +2852,7 @@
   {
     "materialId": "23954434",
     "Name": "Faux Leather",
-    "Price": 600,
+    "Price": 6000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Looks like leather, cheaper",
@@ -2871,7 +2871,7 @@
   {
     "materialId": "41305152",
     "Name": "Pleated Fabric",
-    "Price": 400,
+    "Price": 4000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Textured, holds shape",
@@ -2890,7 +2890,7 @@
   {
     "materialId": "48792296",
     "Name": "Mesh Fabric",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Breathable, transparent",
@@ -2909,7 +2909,7 @@
   {
     "materialId": "73604944",
     "Name": "Rigid PVC Sheet",
-    "Price": 1500,
+    "Price": 15000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Durable, chemical resistant",
@@ -2928,7 +2928,7 @@
   {
     "materialId": "54905700",
     "Name": "Polyester Resin",
-    "Price": 3000,
+    "Price": 30000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Strong, lightweight when cured",
@@ -2947,7 +2947,7 @@
   {
     "materialId": "34226597",
     "Name": "Heat-activated Adhesive",
-    "Price": 100,
+    "Price": 1000,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Bonding, fusible",
@@ -2966,7 +2966,7 @@
   {
     "materialId": "80724336",
     "Name": "Modelling Clay (non-drying)",
-    "Price": 150,
+    "Price": 1500,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Moldable, reusable",
@@ -2985,7 +2985,7 @@
   {
     "materialId": "79786146",
     "Name": "Foam Core Board",
-    "Price": 400,
+    "Price": 4000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Lightweight, easy to cut",
@@ -3004,7 +3004,7 @@
   {
     "materialId": "41323183",
     "Name": "Cardboard",
-    "Price": 50,
+    "Price": 500,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Cheap, easy to work with",
@@ -3023,7 +3023,7 @@
   {
     "materialId": "61076212",
     "Name": "Illustration Board",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Smooth surface, good for drawing",
@@ -3042,7 +3042,7 @@
   {
     "materialId": "90172956",
     "Name": "Craft Wire",
-    "Price": 100,
+    "Price": 1000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Bendable, holds shape",
@@ -3061,7 +3061,7 @@
   {
     "materialId": "97435095",
     "Name": "Pipe Cleaners",
-    "Price": 50,
+    "Price": 500,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Flexible, fuzzy",
@@ -3080,7 +3080,7 @@
   {
     "materialId": "56763494",
     "Name": "Burlap Fabric",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Rough texture, natural look",
@@ -3099,7 +3099,7 @@
   {
     "materialId": "95720316",
     "Name": "Felt Fabric",
-    "Price": 150,
+    "Price": 1500,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Soft, no fray edges",
@@ -3118,7 +3118,7 @@
   {
     "materialId": "23430317",
     "Name": "Sequins",
-    "Price": 80,
+    "Price": 800,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Sparkly, decorative",
@@ -3137,7 +3137,7 @@
   {
     "materialId": "44366443",
     "Name": "Feathers",
-    "Price": 100,
+    "Price": 1000,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Lightweight, decorative",
@@ -3156,7 +3156,7 @@
   {
     "materialId": "73993214",
     "Name": "Gems (Acrylic)",
-    "Price": 150,
+    "Price": 1500,
     "Category": "Plastic",
     "DurabilityRating": 3,
     "DurabilityDesc": "Sparkly, lightweight",
@@ -3175,7 +3175,7 @@
   {
     "materialId": "84520939",
     "Name": "Model Magic (Air Dry Clay)",
-    "Price": 400,
+    "Price": 4000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Lightweight, soft",
@@ -3194,7 +3194,7 @@
   {
     "materialId": "41314438",
     "Name": "Plaster of Paris",
-    "Price": 300,
+    "Price": 3000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Sets quickly, good for molds",
@@ -3213,7 +3213,7 @@
   {
     "materialId": "96626902",
     "Name": "Fiberfill (Polyester)",
-    "Price": 100,
+    "Price": 1000,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Soft, light, provides volume",
@@ -3232,7 +3232,7 @@
   {
     "materialId": "15305437",
     "Name": "Velcro (Hook and Loop)",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Strong fastener, reusable",
@@ -3251,7 +3251,7 @@
   {
     "materialId": "29323157",
     "Name": "Zippers",
-    "Price": 150,
+    "Price": 1500,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Reliable fastener, durable",
@@ -3270,7 +3270,7 @@
   {
     "materialId": "14525843",
     "Name": "Elastic Band",
-    "Price": 80,
+    "Price": 800,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Stretchy, provides tension",
@@ -3289,7 +3289,7 @@
   {
     "materialId": "65183378",
     "Name": "Hot Glue",
-    "Price": 50,
+    "Price": 500,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Quick bonding, easy to use",
@@ -3308,7 +3308,7 @@
   {
     "materialId": "58973565",
     "Name": "Liquid Latex",
-    "Price": 700,
+    "Price": 7000,
     "Category": "Other",
     "DurabilityRating": 6,
     "DurabilityDesc": "Flexible, skin-safe",
@@ -3327,7 +3327,7 @@
   {
     "materialId": "91435040",
     "Name": "Spirit Gum",
-    "Price": 200,
+    "Price": 2000,
     "Category": "Other",
     "DurabilityRating": 1,
     "DurabilityDesc": "Adhesive for prosthetics",
@@ -3346,7 +3346,7 @@
   {
     "materialId": "52660760",
     "Name": "Upholstery Foam",
-    "Price": 600,
+    "Price": 6000,
     "Category": "Other",
     "DurabilityRating": 4,
     "DurabilityDesc": "Lightweight, shapes easily",
@@ -3365,7 +3365,7 @@
   {
     "materialId": "42696919",
     "Name": "Tempered Glass",
-    "Price": 15000,
+    "Price": 150000,
     "Category": "Glass",
     "DurabilityRating": 7,
     "DurabilityDesc": "Stronger than regular glass",
@@ -3384,7 +3384,7 @@
   {
     "materialId": "97536335",
     "Name": "Borosilicate Glass",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Glass",
     "DurabilityRating": 8,
     "DurabilityDesc": "High thermal shock resistance",
@@ -3403,7 +3403,7 @@
   {
     "materialId": "57230161",
     "Name": "Laminated Glass",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Glass",
     "DurabilityRating": 7,
     "DurabilityDesc": "Safety glass, holds together when broken",
@@ -3422,7 +3422,7 @@
   {
     "materialId": "41465521",
     "Name": "Fiber Optic Glass",
-    "Price": 50000,
+    "Price": 500000,
     "Category": "Glass",
     "DurabilityRating": 6,
     "DurabilityDesc": "Transmits light over long distances",
@@ -3441,7 +3441,7 @@
   {
     "materialId": "48588015",
     "Name": "Gorilla Glass",
-    "Price": 30000,
+    "Price": 300000,
     "Category": "Glass",
     "DurabilityRating": 7,
     "DurabilityDesc": "Chemically strengthened, scratch resistant",
@@ -3460,7 +3460,7 @@
   {
     "materialId": "47062971",
     "Name": "Lead Crystal Glass",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Glass",
     "DurabilityRating": 5,
     "DurabilityDesc": "Brilliant sparkle, heavy",
@@ -3479,7 +3479,7 @@
   {
     "materialId": "85335685",
     "Name": "Fused Quartz Glass",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Glass",
     "DurabilityRating": 9,
     "DurabilityDesc": "High purity, excellent UV transmission",
@@ -3498,7 +3498,7 @@
   {
     "materialId": "46629456",
     "Name": "Ceramic Glass",
-    "Price": 35000,
+    "Price": 350000,
     "Category": "Glass",
     "DurabilityRating": 8,
     "DurabilityDesc": "Extremely heat resistant, durable",
@@ -3517,7 +3517,7 @@
   {
     "materialId": "13746656",
     "Name": "Patterned Glass",
-    "Price": 10000,
+    "Price": 100000,
     "Category": "Glass",
     "DurabilityRating": 6,
     "DurabilityDesc": "Obscures vision, decorative",
@@ -3536,7 +3536,7 @@
   {
     "materialId": "61094986",
     "Name": "Electrochromic Glass",
-    "Price": 80000,
+    "Price": 800000,
     "Category": "Glass",
     "DurabilityRating": 5,
     "DurabilityDesc": "Changes transparency with electricity",
@@ -3555,7 +3555,7 @@
   {
     "materialId": "28192754",
     "Name": "Nickel-Titanium (Nitinol)",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Shape memory alloy, superelastic",
@@ -3574,7 +3574,7 @@
   {
     "materialId": "45692979",
     "Name": "Superconductors (NbTi)",
-    "Price": 200000,
+    "Price": 2000000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Zero electrical resistance at low temp",
@@ -3593,7 +3593,7 @@
   {
     "materialId": "72413586",
     "Name": "Aerospace Aluminum Alloys (e.g., 7075)",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Metal",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength-to-weight ratio",
@@ -3612,7 +3612,7 @@
   {
     "materialId": "45840328",
     "Name": "Medical Grade Titanium (Ti-6Al-4V)",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Biocompatible, high strength",
@@ -3631,7 +3631,7 @@
   {
     "materialId": "16429649",
     "Name": "Single Crystal Silicon",
-    "Price": 120000,
+    "Price": 1200000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Semiconductor, high purity",
@@ -3650,7 +3650,7 @@
   {
     "materialId": "60255834",
     "Name": "Gallium Nitride (GaN)",
-    "Price": 180000,
+    "Price": 1800000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High power, high frequency semiconductor",
@@ -3669,7 +3669,7 @@
   {
     "materialId": "75352704",
     "Name": "Sapphire (Synthetic)",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Extremely hard, transparent",
@@ -3688,7 +3688,7 @@
   {
     "materialId": "36713423",
     "Name": "Yttrium Stabilized Zirconia (YSZ)",
-    "Price": 50000,
+    "Price": 500000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Tough ceramic, oxygen sensor material",
@@ -3707,7 +3707,7 @@
   {
     "materialId": "64552273",
     "Name": "Silicon Nitride Ceramics (Si3N4)",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength, heat resistant",
@@ -3726,7 +3726,7 @@
   {
     "materialId": "42923424",
     "Name": "Boron Nitride (Cubic - cBN)",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, high thermal conductivity",
@@ -3745,7 +3745,7 @@
   {
     "materialId": "73129441",
     "Name": "Diamond (Industrial Synthetic)",
-    "Price": 500000,
+    "Price": 5000000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Hardest known material, high thermal cond",
@@ -3764,7 +3764,7 @@
   {
     "materialId": "72830674",
     "Name": "Graphene (Single Layer)",
-    "Price": 1000000,
+    "Price": 10000000,
     "Category": "Other",
     "DurabilityRating": 10,
     "DurabilityDesc": "Strongest known material, lightweight",
@@ -3783,7 +3783,7 @@
   {
     "materialId": "55560855",
     "Name": "Carbon Nanotubes (CNTs)",
-    "Price": 800000,
+    "Price": 8000000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Exceptional strength and electrical conductivity",
@@ -3802,7 +3802,7 @@
   {
     "materialId": "52049294",
     "Name": "Aerogels (Silica)",
-    "Price": 120000,
+    "Price": 1200000,
     "Category": "Other",
     "DurabilityRating": 2,
     "DurabilityDesc": "Extremely lightweight, excellent insulator",
@@ -3821,7 +3821,7 @@
   {
     "materialId": "36515843",
     "Name": "Shape Memory Polymers",
-    "Price": 30000,
+    "Price": 300000,
     "Category": "Plastic",
     "DurabilityRating": 7,
     "DurabilityDesc": "Can return to original shape with stimulus",
@@ -3840,7 +3840,7 @@
   {
     "materialId": "91733687",
     "Name": "Electroactive Polymers (EAPs)",
-    "Price": 40000,
+    "Price": 400000,
     "Category": "Plastic",
     "DurabilityRating": 6,
     "DurabilityDesc": "Change shape/size with electric field",
@@ -3859,7 +3859,7 @@
   {
     "materialId": "72454701",
     "Name": "Magnetorheological (MR) Fluids",
-    "Price": 15000,
+    "Price": 150000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Viscosity changes with magnetic field",
@@ -3878,7 +3878,7 @@
   {
     "materialId": "93819243",
     "Name": "Piezoelectric Ceramics (PZT)",
-    "Price": 25000,
+    "Price": 250000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Generates electricity from mechanical stress",
@@ -3897,7 +3897,7 @@
   {
     "materialId": "74440317",
     "Name": "High-Purity Quartz",
-    "Price": 18000,
+    "Price": 180000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, chemical resistant",
@@ -3916,7 +3916,7 @@
   {
     "materialId": "96602860",
     "Name": "Additive Manufacturing Powders (Ti, Ni-based)",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Other",
     "DurabilityRating": 8,
     "DurabilityDesc": "Used in 3D printing for complex parts",
@@ -3935,7 +3935,7 @@
   {
     "materialId": "83108547",
     "Name": "High-Entropy Alloys (HEA)",
-    "Price": 150000,
+    "Price": 1500000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Exceptional strength, ductility, temp resist",
@@ -3954,7 +3954,7 @@
   {
     "materialId": "30807676",
     "Name": "Metamaterials",
-    "Price": 300000,
+    "Price": 3000000,
     "Category": "Other",
     "DurabilityRating": 5,
     "DurabilityDesc": "Engineered properties beyond natural materials",
@@ -3973,7 +3973,7 @@
   {
     "materialId": "96880451",
     "Name": "Self-Healing Polymers",
-    "Price": 70000,
+    "Price": 700000,
     "Category": "Plastic",
     "DurabilityRating": 6,
     "DurabilityDesc": "Can repair damage autonomously",
@@ -3992,7 +3992,7 @@
   {
     "materialId": "56112647",
     "Name": "Quantum Dots",
-    "Price": 200000,
+    "Price": 2000000,
     "Category": "Other",
     "DurabilityRating": 3,
     "DurabilityDesc": "Nanocrystals for light emission",
@@ -4011,7 +4011,7 @@
   {
     "materialId": "12125000",
     "Name": "High-Temperature Superconductors (HTS)",
-    "Price": 250000,
+    "Price": 2500000,
     "Category": "Other",
     "DurabilityRating": 7,
     "DurabilityDesc": "Zero electrical resistance at higher temp",
@@ -4030,7 +4030,7 @@
   {
     "materialId": "92150680",
     "Name": "Amorphous Metals (Bulk Metallic Glasses)",
-    "Price": 100000,
+    "Price": 1000000,
     "Category": "Glass",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely strong, high elasticity",
@@ -4049,7 +4049,7 @@
   {
     "materialId": "46078034",
     "Name": "Carbon-Carbon Composites",
-    "Price": 180000,
+    "Price": 1800000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely high temp resistance, high strength",
@@ -4068,7 +4068,7 @@
   {
     "materialId": "25237346",
     "Name": "Boron Carbide",
-    "Price": 60000,
+    "Price": 600000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "Extremely hard, lightweight",
@@ -4087,7 +4087,7 @@
   {
     "materialId": "58614574",
     "Name": "Fused Silica",
-    "Price": 20000,
+    "Price": 200000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High purity, UV transparent",
@@ -4106,7 +4106,7 @@
   {
     "materialId": "13346502",
     "Name": "Zirconium Dioxide (ZrO2)",
-    "Price": 35000,
+    "Price": 350000,
     "Category": "Other",
     "DurabilityRating": 9,
     "DurabilityDesc": "High strength, biocompatible",

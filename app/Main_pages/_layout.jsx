@@ -40,13 +40,27 @@ export default function MainTabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="Messages" // This will point to the app/Main_pages/Messages directory
+        options={{
+          title: 'Messages',
+          tabBarIcon: ({ color }) => <FontAwesome name="envelope" size={24} color={color} />,
+          // You can add a tabBarBadge here later for unread messages count
+          // tabBarBadge: 3, 
+        }}
+      />
+      <Tabs.Screen
         name="Settings"
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <FontAwesome name="cog" size={24} color={color} />,
         }}
       />
-
+      <Tabs.Screen
+        name="EditProfile"
+        options={{
+          href: null,
+        }}
+      />
       <Tabs.Screen
         name="Material"
         options={{

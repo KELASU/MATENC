@@ -28,7 +28,7 @@ import {
   serverTimestamp,
   Timestamp, // Ensure Timestamp is imported if you use it for type checking
   runTransaction,
-  deleteDoc
+  deleteDoc,
 } from 'firebase/firestore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // For icons
 

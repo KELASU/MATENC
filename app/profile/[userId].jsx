@@ -7,7 +7,7 @@ import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
 import { Fstore, Fauth } from '../../FirebaseConfig'; // Adjust path if needed
 import {
   doc, getDoc, setDoc, deleteDoc, runTransaction,
-  collection, query, where, getDocs, limit, writeBatch
+  collection, query, where, getDocs, limit, writeBatch, serverTimestamp
 } from 'firebase/firestore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 

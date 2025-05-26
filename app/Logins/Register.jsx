@@ -1,24 +1,24 @@
+// app/Logins/Register.jsx
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { Fauth, Fstore } from '../../FirebaseConfig';
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile as updateAuthProfile } from 'firebase/auth';
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { router } from 'expo-router';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [name, setName] = useState('');
+  const [name, setName] = useState(''); // This is the primary display name
   const [location, setLocation] = useState('');
 
   const handleRegister = async () => {
-    if (!email || !password || !confirmPassword || !name || !location) {
-      Alert.alert('Missing fields', 'Please fill out all fields!');
+    if (!email || !password || !confirmPassword || !name) {
+      Alert.alert('Missing fields', 'Please fill out Name, Email, and Password fields!');
       return;
     }
-
     if (password !== confirmPassword) {
       Alert.alert('Mismatch', 'Passwords do not match!');
       return;
@@ -28,17 +28,28 @@ const Register = () => {
       const userCredential = await createUserWithEmailAndPassword(Fauth, email, password);
       const user = userCredential.user;
 
+      // Update Firebase Auth profile (displayName will be 'name' from form)
+      await updateAuthProfile(user, {
+        displayName: name,
+        // photoURL will be set via EditProfile later
+      });
+
       await sendEmailVerification(user);
       Alert.alert('Verify your email', 'A verification email has been sent.');
 
-      // Step 1: Create default user profile in Firestore
       const userDocRef = doc(Fstore, 'users', user.uid);
       await setDoc(userDocRef, {
         uid: user.uid,
-        email,
-        name,
-        location,
-        profilePicture: '',
+        email: user.email.toLowerCase(),
+        name: name, // Primary display name stored in Firestore
+        avatarUrl: '', // Initialize, to be updated in EditProfile
+        bio: '',       // Initialize, to be updated in EditProfile
+        location: location || '',
+        followerCount: 0,
+        followingCount: 0,
+        createdAt: serverTimestamp(),
+        lastLogin: serverTimestamp(),
+        expoPushToken: null,
         unitPreferences: {
           temperature: 'Celsius',
           distance: 'Kilometers',
@@ -49,17 +60,16 @@ const Register = () => {
           supplierListings: true,
         },
         favorites: {
-          blueprints: [], // Initialize empty array for favorites
-          forums: [],      // Initialize empty array for forums
+          blueprints: [],
+          forums: [],
         },
-        followedUsers: [],
-        followedSuppliers: [],
-        createdAt: new Date(),
+        followedUsers: [],      // Consider if these top-level arrays are still needed
+        followedSuppliers: [],  // if fully relying on subcollections for following/followers
       });
 
       router.replace('/Logins/VerifyEmail');
     } catch (error) {
-      console.error(error.message);
+      console.error("Registration Error:", error.message, error.code);
       Alert.alert('Registration Error', error.message);
     }
   };
@@ -67,70 +77,60 @@ const Register = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>REGISTER</Text>
-
       <TextInput
         style={styles.input}
-        placeholder="Name"
+        placeholder="Name*"
         placeholderTextColor="#aaa"
         onChangeText={setName}
         value={name}
       />
-
       <TextInput
         style={styles.input}
-        placeholder="Location"
+        placeholder="Location (Optional)"
         placeholderTextColor="#aaa"
         onChangeText={setLocation}
         value={location}
       />
-
       <TextInput
         style={styles.input}
-        placeholder="Email"
+        placeholder="Email*"
         placeholderTextColor="#aaa"
         onChangeText={setEmail}
         value={email}
         keyboardType="email-address"
         autoCapitalize="none"
       />
-
       <TextInput
         style={styles.input}
-        placeholder="Password"
+        placeholder="Password*"
         placeholderTextColor="#aaa"
         secureTextEntry
         onChangeText={setPassword}
         value={password}
       />
-
       <TextInput
         style={styles.input}
-        placeholder="Confirm Password"
+        placeholder="Confirm Password*"
         placeholderTextColor="#aaa"
         secureTextEntry
         onChangeText={setConfirmPassword}
         value={confirmPassword}
       />
-
       <TouchableOpacity style={styles.registerButton} onPress={handleRegister}>
         <Text style={styles.registerText}>REGISTER</Text>
       </TouchableOpacity>
-
       <Text style={styles.socialText}>Or sign up with your socials</Text>
       <View style={styles.socialIcons}>
         <FontAwesome name="google" size={24} style={styles.icon} />
         <FontAwesome name="github" size={24} style={styles.icon} />
         <FontAwesome name="facebook" size={24} style={styles.icon} />
       </View>
-
       <TouchableOpacity onPress={() => router.replace('/Logins/Login')}>
         <Text style={styles.loginText}>Already have an account? Log in</Text>
       </TouchableOpacity>
     </View>
   );
 };
-
-export default Register;
 
 const styles = StyleSheet.create({
   container: {
@@ -187,3 +187,5 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
+
+export default Register;
