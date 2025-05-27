@@ -1,3 +1,4 @@
+// app/Main_pages/Messages/index.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import {
   View,
@@ -9,79 +10,103 @@ import {
   ActivityIndicator,
   RefreshControl,
   SafeAreaView,
-  Alert
+  Alert,
+  Platform,
+  StatusBar
 } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
-import { Fstore, Fauth } from '../../../FirebaseConfig'; // Adjust path
+import { Fstore, Fauth } from '../../../FirebaseConfig'; // Adjust path as necessary
 import { collection, query, where, orderBy, onSnapshot, Timestamp } from 'firebase/firestore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Or your preferred icon set
+import { onAuthStateChanged } from 'firebase/auth';
 
 const ChatListScreen = () => {
   const router = useRouter();
-  const currentUser = Fauth.currentUser;
+  const [authUser, setAuthUser] = useState(Fauth.currentUser);
   const [chats, setChats] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
+  // Listen to auth state changes
+  useEffect(() => {
+    const unsubscribeAuth = onAuthStateChanged(Fauth, (user) => {
+      setAuthUser(user);
+      // If user logs out while on this screen, clear chats
+      if (!user) {
+        setChats([]);
+        setIsLoading(false);
+      }
+    });
+    return () => unsubscribeAuth();
+  }, []);
+
+
   const fetchChats = useCallback(() => {
-    if (!currentUser) {
+    if (!authUser) {
       setChats([]);
       setIsLoading(false);
       setRefreshing(false);
+      console.log("ChatList: No authenticated user, skipping chat fetch.");
       return () => {}; // Return empty unsubscribe for consistency
     }
 
+    console.log("ChatList: Authenticated user found, attempting to fetch chats for:", authUser.uid);
     setIsLoading(true);
     const chatsRef = collection(Fstore, 'chats');
-    // Query for chats where the current user is a participant
     const q = query(
       chatsRef,
-      where('participants', 'array-contains', currentUser.uid),
-      orderBy('updatedAt', 'desc') // Show most recent chats first
+      where('participant', 'array-contains', authUser.uid),
+      orderBy('updatedAt', 'desc')
     );
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    const unsubscribeFirestore = onSnapshot(q, (querySnapshot) => {
       const fetchedChats = [];
       querySnapshot.forEach((doc) => {
         fetchedChats.push({ id: doc.id, ...doc.data() });
       });
       setChats(fetchedChats);
+      console.log(`ChatList: Fetched ${fetchedChats.length} chats.`);
       setIsLoading(false);
       setRefreshing(false);
     }, (error) => {
-      console.error("Error fetching chats: ", error);
+      console.error("ChatList: Error fetching chats: ", error);
       Alert.alert("Error", "Could not load your messages.");
       setIsLoading(false);
       setRefreshing(false);
     });
 
-    return unsubscribe;
-  }, [currentUser]);
+    return unsubscribeFirestore;
+  }, [authUser]);
 
-  useFocusEffect( // Refetch when screen comes into focus
+  useFocusEffect(
     useCallback(() => {
+      console.log("ChatList: Screen focused.");
       const unsubscribe = fetchChats();
-      return () => unsubscribe();
+      return () => {
+        console.log("ChatList: Unsubscribing from chats listener.");
+        unsubscribe();
+      };
     }, [fetchChats])
   );
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
-    fetchChats();
+    fetchChats(); // fetchChats handles its own isLoading and refreshing states
   }, [fetchChats]);
 
   const getOtherParticipantInfo = (chat) => {
-    if (!currentUser || !chat.participants || !chat.participantInfo) {
+    if (!authUser || !chat.participant || !chat.participantInfo) {
       return { displayName: "Unknown User", avatarUrl: null };
     }
-    const otherUserId = chat.participants.find(uid => uid !== currentUser.uid);
+    const otherUserId = chat.participant.find(uid => uid !== authUser.uid);
+    if (!otherUserId) return { displayName: "Chat with Self?", avatarUrl: null}; // Should not happen in 2-party chat
+    
     return chat.participantInfo[otherUserId] || { displayName: "User", avatarUrl: `https://ui-avatars.com/api/?name=U&background=random&color=fff` };
   };
 
   const formatTimestamp = (timestamp) => {
-    if (!timestamp) return '';
+    if (!timestamp || !timestamp.toDate) return ''; // Check if it's a Firestore Timestamp
     const date = timestamp.toDate();
-    // Simple time or date formatting
     const now = new Date();
     if (date.toDateString() === now.toDateString()) {
       return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -91,21 +116,21 @@ const ChatListScreen = () => {
 
   const renderChatItem = ({ item: chat }) => {
     const otherParticipant = getOtherParticipantInfo(chat);
-    const unreadCount = chat.unreadCount?.[currentUser.uid] || 0;
+    const unreadCount = authUser ? (chat.unreadCount?.[authUser.uid] || 0) : 0;
 
     return (
       <TouchableOpacity
         style={styles.chatItemContainer}
-        onPress={() => router.push(`/Main_pages/Messages/ChatRoom/${chat.id}`)} // Navigate to specific chat room
+        onPress={() => router.push(`/Main_pages/Messages/ChatRoom/${chat.id}`)}
       >
         <Image 
-          source={{ uri: otherParticipant.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(otherParticipant.displayName?.charAt(0) || 'U')}&background=random&color=fff`}} 
+          source={{ uri: otherParticipant.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(otherParticipant.displayName?.charAt(0) || 'U')}&background=4A728D&color=fff&bold=true`}} 
           style={styles.avatar} 
         />
         <View style={styles.chatTextContainer}>
           <Text style={styles.participantName} numberOfLines={1}>{otherParticipant.displayName}</Text>
           <Text style={styles.lastMessage} numberOfLines={1}>
-            {chat.lastMessageSenderId === currentUser?.uid ? "You: " : ""}{chat.lastMessageText}
+            {chat.lastMessageSenderId === authUser?.uid ? "You: " : ""}{chat.lastMessageText || "No messages yet..."}
           </Text>
         </View>
         <View style={styles.chatMetaContainer}>
@@ -122,18 +147,23 @@ const ChatListScreen = () => {
 
   if (isLoading && chats.length === 0) {
     return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#EAEAEA" />
-      </View>
+      <SafeAreaView style={styles.safeArea}>
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color="#EAEAEA" />
+          <Text style={{color: '#EAEAEA', marginTop: 10}}>Loading Messages...</Text>
+        </View>
+      </SafeAreaView>
     );
   }
 
-  if (!currentUser) {
+  if (!authUser) {
       return (
-          <View style={styles.loadingContainer}>
-              <Icon name="message-alert-outline" size={48} color="#A0D2DB" />
-              <Text style={styles.emptyListText}>Please log in to see your messages.</Text>
-          </View>
+          <SafeAreaView style={styles.safeArea}>
+            <View style={styles.loadingContainer}>
+                <Icon name="message-alert-outline" size={48} color="#A0D2DB" />
+                <Text style={styles.emptyListText}>Please log in to see your messages.</Text>
+            </View>
+          </SafeAreaView>
       )
   }
 
@@ -144,7 +174,7 @@ const ChatListScreen = () => {
         renderItem={renderChatItem}
         keyExtractor={(item) => item.id}
         ListEmptyComponent={
-            !isLoading && <Text style={styles.emptyListText}>You have no messages yet.</Text>
+            !isLoading && <View style={styles.loadingContainer}><Text style={styles.emptyListText}>You have no active messages.</Text></View>
         }
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={["#fff"]} tintColor={"#fff"} />
@@ -158,7 +188,8 @@ const ChatListScreen = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#20394A',
+    backgroundColor: '#20394A', // Consistent dark theme
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   loadingContainer: {
     flex: 1,
@@ -175,23 +206,23 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#325A75', // Darker separator
+    borderBottomColor: '#325A75',
   },
   avatar: {
     width: 50,
     height: 50,
     borderRadius: 25,
     marginRight: 15,
-    backgroundColor: '#4A728D' // Placeholder background
+    backgroundColor: '#4A728D'
   },
   chatTextContainer: {
-    flex: 1, // Allows text to take available space and wrap
+    flex: 1,
   },
   participantName: {
     fontSize: 16,
-    fontWeight: 'bold',
+    // fontWeight: 'bold', // Using font family for weight
     color: '#EAEAEA',
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Medium', // Assuming you have this font
     marginBottom: 3,
   },
   lastMessage: {
@@ -201,19 +232,20 @@ const styles = StyleSheet.create({
   },
   chatMetaContainer: {
     alignItems: 'flex-end',
-    marginLeft: 10, // Space from text container
+    marginLeft: 10,
   },
   timestamp: {
     fontSize: 12,
-    color: '#778A9A', // Muted color
+    color: '#778A9A',
     fontFamily: 'Roboto-Regular',
     marginBottom: 5,
   },
   unreadBadge: {
-    backgroundColor: '#3EB489', // Accent color for unread
+    backgroundColor: '#3EB489',
     borderRadius: 10,
-    width: 20,
+    minWidth: 20, // Ensure badge is circular even for single digit
     height: 20,
+    paddingHorizontal: 5, // Add padding for numbers like '9+'
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -226,7 +258,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 50,
     fontSize: 16,
-    color: '#A0D2DB',
+    color: '#A0D2DB', // Lighter text for empty state
     fontFamily: 'Roboto-Regular',
   },
 });

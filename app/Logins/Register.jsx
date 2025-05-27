@@ -119,12 +119,12 @@ const Register = () => {
       <TouchableOpacity style={styles.registerButton} onPress={handleRegister}>
         <Text style={styles.registerText}>REGISTER</Text>
       </TouchableOpacity>
-      <Text style={styles.socialText}>Or sign up with your socials</Text>
+      {/* <Text style={styles.socialText}>Or sign up with your socials</Text>
       <View style={styles.socialIcons}>
         <FontAwesome name="google" size={24} style={styles.icon} />
         <FontAwesome name="github" size={24} style={styles.icon} />
         <FontAwesome name="facebook" size={24} style={styles.icon} />
-      </View>
+      </View> */}
       <TouchableOpacity onPress={() => router.replace('/Logins/Login')}>
         <Text style={styles.loginText}>Already have an account? Log in</Text>
       </TouchableOpacity>

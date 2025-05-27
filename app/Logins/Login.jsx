@@ -68,12 +68,12 @@ const Login = () => {
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
 
-      <Text style={styles.socialText}>Or sign in with your socials</Text>
-      <View style={styles.socialIcons}>
+      {/* <Text style={styles.socialText}>Or sign in with your socials</Text> */}
+      {/* <View style={styles.socialIcons}>
         <FontAwesome name="google" size={24} style={styles.icon} />
         <FontAwesome name="github" size={24} style={styles.icon} />
         <FontAwesome name="facebook" size={24} style={styles.icon} />
-      </View>
+      </View> */}
 
       <TouchableOpacity onPress={() => router.replace('/Logins/Register')}>
         <Text style={styles.registerText}>Don't have an account? Register</Text>

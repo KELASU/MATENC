@@ -6,3 +6,8 @@
 !babel.config.js
 !metro.config.js
 !assets/**
+!google-services.json
+!FirebaseConfig.js
+!app/**
+!datab/**
+!functions/**
