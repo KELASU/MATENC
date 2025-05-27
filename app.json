@@ -3,6 +3,7 @@
     "scheme": "matenc",
     "name": "MATENC",
     "slug": "MATENC",
+    "owner": "orgmec",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
