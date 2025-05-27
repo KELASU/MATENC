@@ -1,16 +1,16 @@
-// app/_layout.jsx
-
-import { Slot, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { View, ActivityIndicator, StyleSheet, Text, Alert, Platform, InteractionManager } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Text, Platform, InteractionManager } from 'react-native';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Fauth, Fstore } from '../FirebaseConfig'; // Ensure this path is correct
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-// Constants is not strictly needed if we are not trying to pass an explicit projectId
-// import Constants from 'expo-constants'; 
+import { Slot, useRouter } from 'expo-router'; // Removed useSegments for this approach to simplify
+import * as SplashScreen from 'expo-splash-screen';
+
+// 1. Keep the native splash screen visible initially
+SplashScreen.preventAutoHideAsync();
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -21,8 +21,6 @@ Notifications.setNotificationHandler({
 });
 
 async function registerForPushNotificationsAsync() {
-  let token;
-
   if (Platform.OS === 'android') {
     try {
       await Notifications.setNotificationChannelAsync('default', {
@@ -54,187 +52,151 @@ async function registerForPushNotificationsAsync() {
     }
 
     try {
-      console.log("Attempting to get push token with NO explicit projectId...");
-      
-      // *** Calling getExpoPushTokenAsync WITHOUT any arguments ***
-      token = (await Notifications.getExpoPushTokenAsync()).data; 
-      
-      console.log('Expo Push Token obtained (auto-inferred project):', token);
+      console.log("Attempting to get push token...");
+      const token = (await Notifications.getExpoPushTokenAsync()).data;
+      console.log('Expo Push Token:', token);
       return token;
     } catch (e) {
       console.error("Error getting Expo push token:", e);
-      const errorMessage = e.message || "An unknown error occurred.";
-      
-      if (errorMessage.includes("No \"projectId\" found")) {
-        Alert.alert(
-          'Token Error',
-          'Failed to get push token: Expo could not automatically determine the project ID. ' +
-          'Ensure app.json (slug) and native configurations (google-services.json, GoogleService-Info.plist) are correct. ' +
-          'Using a development build is highly recommended for full push notification support.'
-        );
-      } else if (errorMessage.includes("Invalid uuid")) {
-         Alert.alert(
-          'Token Configuration Error',
-          `Failed to get push token due to an issue with project identification (often expecting a UUID): ${errorMessage}`
-         );
-      } else {
-        Alert.alert('Token Error', `Failed to get push token: ${errorMessage}`);
-      }
+      Alert.alert('Token Error', `Failed to get push token: ${e.message}`);
       return null;
     }
   } else {
-    console.log('Not a physical device, or push notifications not supported for this environment.');
+    console.log('Push notifications not supported for this device (emulator/simulator).');
     return null;
   }
 }
 
-
 export default function RootLayout() {
   const router = useRouter();
-  const [checking, setChecking] = useState(true);
+  const [showJsLoading, setShowJsLoading] = useState(true); // Controls your custom JS loading screen
+  const [authProcessed, setAuthProcessed] = useState(false); // Tracks if onAuthStateChanged has run at least once
+
   const notificationListener = useRef(null);
   const responseListener = useRef(null);
 
   useEffect(() => {
-    let authUnsubscribe; // Renamed for clarity
+    let authUnsubscribe;
 
     const initializeApp = async () => {
       try {
-        // This part runs on every app start as per your original structure
-        await AsyncStorage.clear();
-        console.log('✅ AsyncStorage cleared');
-        await signOut(Fauth);
-        console.log('✅ Firebase user signed out');
+        // Optional: Forcing sign out on every app start (usually for debugging)
+        // await AsyncStorage.clear();
+        // await signOut(Fauth);
+        // console.log('User signed out (debug).');
 
-        // Setup onAuthStateChanged listener immediately after sign out
-        console.log('🔁 Setting up onAuthStateChanged listener...');
         authUnsubscribe = onAuthStateChanged(Fauth, async (user) => {
-          console.log('✅ onAuthStateChanged triggered. User:', user ? user.uid : null);
+          console.log('onAuthStateChanged triggered. User:', user ? user.uid : 'null');
           try {
             if (user) {
               const token = await registerForPushNotificationsAsync();
               if (token) {
-                try {
-                  await setDoc(
-                    doc(Fstore, 'users', user.uid),
-                    {
-                      expoPushToken: token,
-                      lastLogin: serverTimestamp(), // Store last login time
-                    },
-                    { merge: true }
-                  );
-                  console.log('✅ Push token saved to Firestore for user:', user.uid);
-                } catch (error) {
-                  console.warn('❌ Failed to save push token to Firestore:', error);
-                }
-              } else {
-                console.warn('⚠️ No push token retrieved for user:', user.uid);
+                await setDoc(
+                  doc(Fstore, 'users', user.uid),
+                  { expoPushToken: token, lastLogin: serverTimestamp() },
+                  { merge: true }
+                );
+                console.log('✅ Push token saved to Firestore for user:', user.uid);
+              } else if (Device.isDevice) {
+                console.warn('⚠️ No push token retrieved for user on device:', user.uid);
               }
-              // Route user
-              console.log(`User email verified: ${user.emailVerified}. Routing...`);
-              router.replace(user.emailVerified ? '/Main_pages/Home' : '/Logins/VerifyEmail');
+
+              InteractionManager.runAfterInteractions(() => {
+                router.replace(user.emailVerified ? '/Main_pages/Home' : '/Logins/VerifyEmail');
+              });
             } else {
-              // No user
-              console.log('No user signed in. Routing to Onboarding...');
-              router.replace('/Logins/Onboarding');
+              InteractionManager.runAfterInteractions(() => {
+                router.replace('/Logins/Onboarding');
+              });
             }
-          } catch (innerError) {
-            console.error('Error within onAuthStateChanged callback:', innerError);
-            // Fallback routing if something goes wrong inside
-             router.replace('/Logins/Onboarding');
+          } catch (error) {
+            console.error('Error within onAuthStateChanged (after user check):', error);
+            InteractionManager.runAfterInteractions(() => {
+              router.replace('/Logins/Onboarding'); // Fallback
+            });
           } finally {
-            // Ensure checking is set to false regardless of inner outcomes
-            if (checking) setChecking(false); // Only set if still true to avoid re-renders if already false
+            if (!authProcessed) setAuthProcessed(true); // Mark auth as processed
+            // We will hide JS loader in another effect based on authProcessed
           }
         });
-      } catch (initError) {
-        console.warn('⚠️ Error during app initialization (signout/clear):', initError);
-        // Fallback routing and ensure checking is false
-        router.replace('/Logins/Onboarding'); // Or a dedicated error screen
-        if (checking) setChecking(false);
-      }
-      // Removed the setTimeout to make initialization faster
-      // setChecking(false) is now primarily handled within onAuthStateChanged's finally block or initAuth's catch.
-      // However, if onAuthStateChanged doesn't fire immediately (e.g. network issues for Firebase)
-      // and there's no user, we might still need a timeout or a different way to stop "checking".
-      // For now, let's rely on onAuthStateChanged. If it still hangs, this is the area to look at.
-      // A failsafe:
-      const failsafeTimeout = setTimeout(() => {
-          if (checking) {
-              console.warn("Failsafe: Still checking after 5s, forcing UI update.");
-              setChecking(false);
-              // Optionally route to a default page if auth state is still unknown
-              if (!Fauth.currentUser) {
-                  router.replace('/Logins/Onboarding');
-              }
-          }
-      }, 5000); // 5 seconds failsafe
 
-      // Clean up failsafe timeout
-      return () => clearTimeout(failsafeTimeout);
+        // 2. Hide the NATIVE splash screen once JS is loaded and ready to show your JS loading screen.
+        await SplashScreen.hideAsync();
+        console.log("Native splash hidden. Custom JS loading screen should be visible.");
+
+      } catch (initError) {
+        console.warn('⚠️ Error during app initialization (before onAuthStateChanged setup or splash hide):', initError);
+        if (!authProcessed) setAuthProcessed(true); // Ensure we can proceed to hide JS loader
+        try { await SplashScreen.hideAsync(); } catch (e) { console.error("Error hiding splash in catch: ", e)}
+      }
     };
 
     initializeApp();
 
-    // Setup notification listeners
+    // Notification Listeners
     notificationListener.current = Notifications.addNotificationReceivedListener((notification) => {
       console.log('🔔 Notification received in foreground:', notification);
-      // You can add logic here to update UI or show an in-app message
     });
-
     responseListener.current = Notifications.addNotificationResponseReceivedListener((response) => {
       console.log('📲 User tapped notification:', response);
       const data = response.notification.request.content.data;
-      console.log('Notification data:', data);
-
-      // Example: Navigate if the notification has specific data
-      if (data && data.screen && router) { // Ensure router is available
-        router.push(data.screen);
-      } else if (data && data.postId && router) {
-        router.push(`/Main_pages/ForumPost/${data.postId}`); // Adjust route as needed
+      if (router.isReady()) { // Check if router is ready before navigation
+        if (data && data.screen) {
+          router.push(data.screen);
+        } else if (data && data.postId) {
+          router.push(`/Main_pages/ForumPost/${data.postId}`); // Adjust path to your route structure
+        }
       }
     });
 
-    // Cleanup function
     return () => {
       console.log('🛑 Cleaning up RootLayout useEffect...');
-      if (authUnsubscribe) {
-        console.log('Unsubscribing Firebase auth listener.');
-        authUnsubscribe();
-      }
-      if (notificationListener.current) {
-        console.log('Removing notification received listener.');
-        Notifications.removeNotificationSubscription(notificationListener.current);
-      }
-      if (responseListener.current) {
-        console.log('Removing notification response listener.');
-        Notifications.removeNotificationSubscription(responseListener.current);
-      }
+      if (authUnsubscribe) authUnsubscribe();
+      if (notificationListener.current) Notifications.removeNotificationSubscription(notificationListener.current);
+      if (responseListener.current) Notifications.removeNotificationSubscription(responseListener.current);
     };
-  }, [router]); // router as a dependency for router.replace
+  }, [router]); // Added router as dependency for notification response handling
 
-  if (checking) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#20394A" />
-        <Text style={styles.loadingText}>Initializing App...</Text>
-      </View>
-    );
-  }
+  // This effect handles hiding your custom JS loading screen
+  useEffect(() => {
+    if (authProcessed) {
+      // Once Firebase auth state has been processed at least once,
+      // the navigation logic inside onAuthStateChanged should have been triggered.
+      // Now it's safe to hide your custom JS loading screen.
+      const timer = setTimeout(() => { // Optional small delay to ensure navigation has started
+        setShowJsLoading(false);
+        console.log("Custom JS loading screen hidden.");
+      }, 100); // Adjust or remove delay as needed
+      return () => clearTimeout(timer);
+    }
+  }, [authProcessed]);
 
-  return <Slot />; // This renders the rest of your app
+
+  return (
+    <>
+      {/* 3. Always render Slot so expo-router is happy */}
+      <Slot />
+      {/* 4. Conditionally render your custom JS loading screen as an overlay */}
+      {showJsLoading && (
+        <View style={[StyleSheet.absoluteFill, styles.loadingContainer, { zIndex: 10 }]}>
+          <ActivityIndicator size="large" color="#20394A" />
+          <Text style={styles.loadingText}>Initializing App...</Text>
+        </View>
+      )}
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
   loadingContainer: {
     flex: 1,
-    backgroundColor: '#fefaf5', // Or your app's background color
+    backgroundColor: '#fefaf5', // Your loading screen background
     alignItems: 'center',
     justifyContent: 'center',
   },
   loadingText: {
     marginTop: 10,
-    color: '#20394A', // Or your app's primary text color
+    color: '#20394A',
     fontSize: 16,
   },
 });
