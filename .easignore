@@ -1,13 +1,19 @@
-*
-!app.json
-!eas.json
+# Ignore node_modules and build artifacts
+node_modules
+build
+dist
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore IDE settings
+.vscode
+.idea
+
 !package.json
 !package-lock.json
-!babel.config.js
-!metro.config.js
-!assets/**
-!google-services.json
-!FirebaseConfig.js
-!app/**
-!datab/**
-!functions/**
