@@ -53,6 +53,8 @@ const Login = () => {
         value={email}
         keyboardType="email-address"
         autoCapitalize="none"
+        testID="login_email_input"
+        accessibilityLabel="email_input"
       />
 
       <TextInput
@@ -62,9 +64,15 @@ const Login = () => {
         secureTextEntry
         onChangeText={setPassword}
         value={password}
+        testID="login_password_input"
+        accessibilityLabel="password_input"
       />
-
-      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+      
+      <TouchableOpacity 
+        style={styles.loginButton} 
+        onPress={handleLogin}
+        testID="login_button"
+        accessibilityLabel="login_button">
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
 

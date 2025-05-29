@@ -23,8 +23,8 @@
       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
-      "googleServicesFile": "./google-services.json",
-      "package": "com.pokadex.matenc"
+      "package": "com.pokadex.matenc",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
     },

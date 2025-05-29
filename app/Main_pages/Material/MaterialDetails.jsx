@@ -283,7 +283,7 @@ export default function MaterialDetailsScreen() {
                 <MapView
                   ref={mapRef}
                   style={StyleSheet.absoluteFill}
-                  provider={PROVIDER_DEFAULT} 
+                  provider={PROVIDER_GOOGLE} 
                   initialRegion={mapRegion}
                   region={mapRegion}
                   onRegionChangeComplete={setMapRegion}
