@@ -1,0 +1,29 @@
+[
+  {
+    "action": "inputText",
+    "selector": {
+      "contentDescription": "email_input"
+    },
+    "text": "techplayz24@gmail.com"
+  },
+  {
+    "action": "inputText",
+    "selector": {
+      "contentDescription": "password_input"
+    },
+    "text": "techken24"
+  },
+  {
+    "action": "click",
+    "selector": {
+      "contentDescription": "login_button"
+    }
+  },
+  {
+    "action": "waitFor",
+    "selector": {
+      "contentDescription": "home_greeting_text"
+    },
+    "timeout": 15000
+  }
+]

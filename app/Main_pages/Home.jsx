@@ -230,7 +230,9 @@ const HomeScreen = () => {
                     style={styles.headerAvatar} 
                 />
             </TouchableOpacity>
-            <Text style={styles.headerGreeting}>
+            <Text 
+                style={styles.headerGreeting}
+                testID="home_greeting_text">
               Good Afternoon, {currentUserData?.name || currentUserData?.email?.split('@')[0] || "User"}
             </Text>
             </>

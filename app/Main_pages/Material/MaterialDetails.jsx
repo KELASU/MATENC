@@ -20,7 +20,7 @@ import { useLocalSearchParams, Stack, useRouter } from 'expo-router';
 // IMPORTANT: Adjust this path to your actual JSON data file
 import materialData from '../../../datab/materialinfo.json'; 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import MapView, { Marker, UrlTile, PROVIDER_DEFAULT } from 'react-native-maps';
+import MapView, { Marker, UrlTile, PROVIDER_DEFAULT, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as Location from 'expo-location';
 
 // Helper function for distance (Haversine formula)
